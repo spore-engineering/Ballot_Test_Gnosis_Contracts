@@ -1,4 +1,4 @@
-# Ballot_Test_Gnosis_Contracts
+# Ballot Gnosis Contracts
 
 ## WhitelistSoulbound1155NFT.sol
 ERC1155 Soulbound NFT implementation to serve as whitelist and KYC mechanism for participants.
@@ -25,6 +25,18 @@ The subsecuent NFTs represents if the user is whitelisted for the voting contrac
 - NFT ID 0 represents the user KYC compliance.
 - NFT ID 1~N represents the user whitelist for the voting contracts.
 
-## Improvements
+## Why The NFT Approach?
+
+- **Costs:** Some times the process of upload big lists of whitelisted addresses could be costly in gas.
+- **Efficiency:** Once NFTs are minted, contracts can perform automatic business logic based on many custom scenarios.
+- **Flexibility:** Users can been fidelized and unlock more incentives by holding an unique key for many products.
+
+## Improvements & Known Issues
 
 - The **safeBatchTransferFrom** function from the ERC1155 contract is not soulbound enabled, users could transfer their NFTs using this method.
+- If a votation is deuce, there's no way to break the even.
+- Using Merkle Tree signatures for whitelisting users instead of NFTs.
+- Mint ERC20 tokens once users vote to serve as some kind of voting power for upcoming initiatives or reward systems to fidelize.
+
+## How To Use
+
