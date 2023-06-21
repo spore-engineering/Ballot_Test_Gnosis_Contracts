@@ -58,3 +58,17 @@ The subsecuent NFTs represents if the user is whitelisted for the voting contrac
 
 ## How To Use
 
+1. Deploy WhitelistSoulbound1155NFT.sol.
+2. Enable soulbound for token IDs using the setSoulbound function.
+3. Update the newly deployed NFT contract address on the BallotContract.sol contract.
+4. Update the whitelist NFT ID on the BallotContract.sol contract.
+5. Deploy BallotContract.sol.
+
+## BallotContract.sol Constructor
+
+The constructor takes 2 parameters, the first is a string corresponding to the voting title and the second is an array of strings corresponding to the options/choices availabes.
+
+### Example Parameters
+
+- **votingProposalTitle (String):** When next barbecue should take place?
+- **proposalsNames (Array):** ["June 23", "June 24", "June 25", "June 26"]
