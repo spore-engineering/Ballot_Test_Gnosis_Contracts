@@ -288,7 +288,7 @@ contract SmallCommunityElectionVote is Ownable, ReentrancyGuard {
     uint256 public VOTE_NFT_ID = 1; //user must hold nft id 1 in order to be able to vote on these proposals
     uint256 public END_TIME = block.timestamp + 3 days; //time until vote overs
 
-    IERC1155 public NFT = IERC1155(0xDA0bab807633f07f013f94DD0E6A4F96F8742B53); //address of the NFT contract
+    IERC1155 public NFT = IERC1155(0x77f6A5f1B7a2b6D6C322Af8581317D6Bb0a52689); //address of the NFT contract
 
     mapping(address => Voter) public voters;
 
